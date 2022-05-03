@@ -1,0 +1,42 @@
+{
+  "input_bucket": "global-bir-havi-shared-test",
+  "output_bucket": "parquettest1",
+  "oem_production_plans" : {
+    "Sheet" : "weekly production plan",
+    "output_par_file": "oem_production_plans/oem_production_plans_output.parquet",
+    "date_row_num": 3,
+    "skip_rows_num": 5
+  },
+  "oemv2_production_plans" : {
+    "Sheet" : "OEM Supplier Production Plans",
+    "output_par_file": "oemv2_production_plans/",
+    "date_row_num": 3,
+    "skip_rows_num": 5
+  },
+ "kes_franke" : {
+   "output_par_file": "kes_franke/",
+   "market_region": ["US","EMEA","ASIA"]
+ },
+   "kes_HK" : {
+     "sheet" : "H&K Availability",
+     "output_par_file": "kes_HK/KES_Data_Template_HK_output.parquet",
+     "names": ["Sales_Order#", "Order_Type", "National_Store#", "country", "Date_order_Created", "PO_Due_Date", "Date_Required", "Part_Description", "Equipment_Type", "Order_Line#", "H&K_Part#", "Full_line_Quantity", "Available_Quantity", "Availability_Status", "PO_Number", "PO_Line", "Vendor_Part_Number", "Vendor_Name", "H&K_Warehouse", "Required_Year/Month"]
+   },
+   "mcd_market_plans" : {
+     "Sheet1" : "Monthly Deployment Plan",
+     "Sheet2" : "Kitchen Equipment Order Status",
+     "date_row_num": 5,
+     "output_par_file1": "mcd_market_plans/Monthly_Deployment_Plan/",
+     "output_par_file2": "mcd_market_plans/Kitchen_Equipment_Order_Status/"
+
+   },
+  "lookup tables": {
+    "output_par_file": "lookup tables/Kes_product_lookup_table.parquet"
+  },
+  "business_rules": {
+    "Sheet1" : "NRR_Business Rules",
+    "Sheet2" : "Reinvestment_Business Rules",
+    "output_par_file1": "business_rules/nrr/nrr_business_rules_output.parquet",
+    "output_par_file2": "business_rules/reinvestment/reinvestment_business_rules_output.parquet"
+  }
+}
